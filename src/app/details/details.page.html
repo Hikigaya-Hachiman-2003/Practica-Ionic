@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/gfnc"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="character; else loading">
+  <div class="character-details">
+    <img [src]="character.Imagen" [alt]="character.Nombre" />
+    <h1>{{ character.Nombre }}</h1>
+    <p><b>Clase:</b> {{ character.Clase }}</p>
+    <p><b>Rareza:</b> {{ character.Rareza }}</p>
+    <h4>Stats Maximos:</h4>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label><b>HP:</b> {{character.Stats_max.HP}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Atack:</b> {{character.Stats_max.ATK}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Atack Speed:</b> {{character.Stats_max.ATK_Speed}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Power:</b> {{character.Stats_max.Power}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Defense:</b> {{character.Stats_max.DEF}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Defense Penetration:</b> {{character.Stats_max.DEF_Penetration}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Critical Rate:</b> {{character.Stats_max.Crit_Rate}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Critical Damage:</b> {{character.Stats_max.Crit_Damage}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>After Battle Recovery:</b> {{character.Stats_max.After_Battle_Recovery}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <h4>Stats Minimos:</h4>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label><b>HP:</b> {{character.Stats_min.HP}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Atack:</b> {{character.Stats_min.ATK}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Atack Speed:</b> {{character.Stats_min.ATK_Speed}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Power:</b> {{character.Stats_min.Power}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Defense:</b> {{character.Stats_min.DEF}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Defense Penetration:</b> {{character.Stats_min.DEF_Penetration}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Critical Rate:</b> {{character.Stats_min.Crit_Rate}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Critical Damage:</b> {{character.Stats_min.Crit_Damage}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>After Battle Recovery:</b> {{character.Stats_min.After_Battle_Recovery}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ng-template #loading>
+  <ion-content>
+    <p>Cargando detalles...</p>
+  </ion-content>
+</ng-template>

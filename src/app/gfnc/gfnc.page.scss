@@ -1,0 +1,21 @@
+.custom-card {
+    height: 500px;
+    /* Altura fija para todas las tarjetas */
+    max-width: 100%;
+    /* Asegura que las tarjetas se adapten a la columna */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribuye contenido */
+    text-align: center;
+    /* Centra el contenido */
+}
+
+.custom-card img {
+    height: 350px;
+    /* Tamaño consistente para la imagen */
+    object-fit:contain;
+    /* Recorta o ajusta la imagen sin deformarla */
+    width: 100%;
+    /* Imagen ocupa todo el ancho del card */
+}
